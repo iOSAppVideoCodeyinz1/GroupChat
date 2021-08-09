@@ -17,6 +17,7 @@
 		D4A14D5E26C1778A004C1564 /* ProfilePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4A14D5D26C1778A004C1564 /* ProfilePageViewController.swift */; };
 		D4A14D6026C17CDC004C1564 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4A14D5F26C17CDC004C1564 /* Group.swift */; };
 		D4A14D6226C17D2C004C1564 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4A14D6126C17D2C004C1564 /* User.swift */; };
+		D4A14D6426C181F9004C1564 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4A14D6326C181F9004C1564 /* UserManager.swift */; };
 		D4C57C2F26C146D6000351FE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C57C2E26C146D6000351FE /* AppDelegate.swift */; };
 		D4C57C3126C146D6000351FE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C57C3026C146D6000351FE /* SceneDelegate.swift */; };
 		D4C57C3326C146D6000351FE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C57C3226C146D6000351FE /* ViewController.swift */; };
@@ -38,6 +39,7 @@
 		D4A14D5D26C1778A004C1564 /* ProfilePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePageViewController.swift; sourceTree = "<group>"; };
 		D4A14D5F26C17CDC004C1564 /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
 		D4A14D6126C17D2C004C1564 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		D4A14D6326C181F9004C1564 /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
 		D4C57C2B26C146D6000351FE /* GroupChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GroupChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4C57C2E26C146D6000351FE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D4C57C3026C146D6000351FE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -114,6 +116,7 @@
 				D4A14D5B26C170EE004C1564 /* SideNavViewController.swift */,
 				D4A14D5F26C17CDC004C1564 /* Group.swift */,
 				D4A14D6126C17D2C004C1564 /* User.swift */,
+				D4A14D6326C181F9004C1564 /* UserManager.swift */,
 			);
 			path = GroupChat;
 			sourceTree = "<group>";
@@ -239,6 +242,7 @@
 				D4A14D6026C17CDC004C1564 /* Group.swift in Sources */,
 				D4A14D5626C148C7004C1564 /* RegisterViewController.swift in Sources */,
 				D4A14D5E26C1778A004C1564 /* ProfilePageViewController.swift in Sources */,
+				D4A14D6426C181F9004C1564 /* UserManager.swift in Sources */,
 				D4A14D5826C15050004C1564 /* GroupsTableViewController.swift in Sources */,
 				D4A14D5426C148A9004C1564 /* LoginViewController.swift in Sources */,
 				D4C57C3126C146D6000351FE /* SceneDelegate.swift in Sources */,

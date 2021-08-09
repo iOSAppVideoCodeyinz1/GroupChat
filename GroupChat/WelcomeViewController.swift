@@ -22,16 +22,6 @@ class WelcomeViewController: ViewController {
 //        }
 //    }
     
-//    override func viewWillDisappear(_ animated: Bool) {
-//        super.viewDidAppear(animated)
-//        if Auth.auth().currentUser != nil {
-//            print("Someone is already signed in")
-//            self.performSegue(withIdentifier: self.toGroupsSegueID, sender: self)
-//        }
-//    }
-    
-    
-    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
@@ -52,4 +42,11 @@ class WelcomeViewController: ViewController {
         Auth.auth().removeStateDidChangeListener(authListenerHandle!)
     }
     
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if segue.identifier == toGroupsSegueID {
+//            //Only segue to check
+//            print("Checking for user \(Auth.auth().currentUser!.uid)")
+//            UserManager.shared.addUser(uid: Auth.auth().currentUser!.uid, firstName: Auth.auth().currentUser!.displayName, lastName: Auth.auth().currentUser!.displayName)
+//        }
+//    }
 }
