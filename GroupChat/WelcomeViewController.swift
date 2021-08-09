@@ -30,6 +30,8 @@ class WelcomeViewController: ViewController {
 //        }
 //    }
     
+    
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
@@ -45,6 +47,9 @@ class WelcomeViewController: ViewController {
         
         
     }
-    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        Auth.auth().removeStateDidChangeListener(authListenerHandle!)
+    }
     
 }
