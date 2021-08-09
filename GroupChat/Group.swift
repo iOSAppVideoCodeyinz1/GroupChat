@@ -6,13 +6,37 @@
 //
 
 import Foundation
-
+import Firebase
 class Group {
+    var author: String
+    var id: String
     var name: String
-    var memberEmails: String
+//    var memberEmails: String
     
-    init(name: String, emails: String) {
-        self.name = name
-        self.memberEmails = emails
+
+    
+    init(documentSnapshot: DocumentSnapshot) {
+        self.id = documentSnapshot.documentID
+        let data = documentSnapshot.data()!
+        self.name = data["name"] as! String
+//        self.memberEmails = data["memberEmail"] as! String
+        self.author = data["author"] as! String
+    }
+}
+
+class Message {
+    var body: String
+    var author: String
+    var name: String
+    var id: String
+
+    
+    init(documentSnapshot: DocumentSnapshot) {
+        self.id = documentSnapshot.documentID
+        let data = documentSnapshot.data()!
+        self.name = data["name"] as! String
+        self.author = data["author"] as! String
+        self.body = data["body"] as! String
+        
     }
 }

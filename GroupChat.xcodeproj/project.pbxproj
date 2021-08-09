@@ -18,9 +18,12 @@
 		D4A14D6026C17CDC004C1564 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4A14D5F26C17CDC004C1564 /* Group.swift */; };
 		D4A14D6226C17D2C004C1564 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4A14D6126C17D2C004C1564 /* User.swift */; };
 		D4A14D6426C181F9004C1564 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4A14D6326C181F9004C1564 /* UserManager.swift */; };
+		D4A14D6626C1B10D004C1564 /* MessagePageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4A14D6526C1B10D004C1564 /* MessagePageController.swift */; };
+		D4A14D6A26C1BB95004C1564 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4A14D6926C1BB95004C1564 /* ViewController.swift */; };
+		D4BF4D8826C1C7F600C40EB1 /* MessageSideNav.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4BF4D8726C1C7F600C40EB1 /* MessageSideNav.swift */; };
+		D4BF4D8C26C1C97F00C40EB1 /* MembersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4BF4D8B26C1C97F00C40EB1 /* MembersTableViewController.swift */; };
 		D4C57C2F26C146D6000351FE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C57C2E26C146D6000351FE /* AppDelegate.swift */; };
 		D4C57C3126C146D6000351FE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C57C3026C146D6000351FE /* SceneDelegate.swift */; };
-		D4C57C3326C146D6000351FE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C57C3226C146D6000351FE /* ViewController.swift */; };
 		D4C57C3626C146D6000351FE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4C57C3426C146D6000351FE /* Main.storyboard */; };
 		D4C57C3826C146D7000351FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4C57C3726C146D7000351FE /* Assets.xcassets */; };
 		D4C57C3B26C146D7000351FE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4C57C3926C146D7000351FE /* LaunchScreen.storyboard */; };
@@ -40,10 +43,13 @@
 		D4A14D5F26C17CDC004C1564 /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
 		D4A14D6126C17D2C004C1564 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		D4A14D6326C181F9004C1564 /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
+		D4A14D6526C1B10D004C1564 /* MessagePageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagePageController.swift; sourceTree = "<group>"; };
+		D4A14D6926C1BB95004C1564 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D4BF4D8726C1C7F600C40EB1 /* MessageSideNav.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageSideNav.swift; sourceTree = "<group>"; };
+		D4BF4D8B26C1C97F00C40EB1 /* MembersTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MembersTableViewController.swift; sourceTree = "<group>"; };
 		D4C57C2B26C146D6000351FE /* GroupChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GroupChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4C57C2E26C146D6000351FE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D4C57C3026C146D6000351FE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D4C57C3226C146D6000351FE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D4C57C3526C146D6000351FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D4C57C3726C146D7000351FE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D4C57C3A26C146D7000351FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -79,6 +85,38 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		D4A14D6726C1BB5A004C1564 /* Side Naves */ = {
+			isa = PBXGroup;
+			children = (
+				D4BF4D8726C1C7F600C40EB1 /* MessageSideNav.swift */,
+				D4A14D5B26C170EE004C1564 /* SideNavViewController.swift */,
+			);
+			path = "Side Naves";
+			sourceTree = "<group>";
+		};
+		D4A14D6826C1BB6D004C1564 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D4A14D5726C1504F004C1564 /* GroupsTableViewController.swift */,
+				D4A14D6526C1B10D004C1564 /* MessagePageController.swift */,
+				D4A14D5526C148C7004C1564 /* RegisterViewController.swift */,
+				D4A14D6926C1BB95004C1564 /* ViewController.swift */,
+				D4A14D5D26C1778A004C1564 /* ProfilePageViewController.swift */,
+				D4A14D5126C1489C004C1564 /* WelcomeViewController.swift */,
+				D4A14D5326C148A9004C1564 /* LoginViewController.swift */,
+				D4BF4D8B26C1C97F00C40EB1 /* MembersTableViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		D4A14D6B26C1BBB4004C1564 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D4A14D6326C181F9004C1564 /* UserManager.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		D4C57C2226C146D6000351FE = {
 			isa = PBXGroup;
 			children = (
@@ -100,23 +138,18 @@
 		D4C57C2D26C146D6000351FE /* GroupChat */ = {
 			isa = PBXGroup;
 			children = (
-				D4A14D5D26C1778A004C1564 /* ProfilePageViewController.swift */,
+				D4A14D6B26C1BBB4004C1564 /* Model */,
+				D4A14D6826C1BB6D004C1564 /* Controllers */,
+				D4A14D6726C1BB5A004C1564 /* Side Naves */,
 				D4C57C2E26C146D6000351FE /* AppDelegate.swift */,
 				D4C57C3026C146D6000351FE /* SceneDelegate.swift */,
-				D4C57C3226C146D6000351FE /* ViewController.swift */,
 				D4C57C3426C146D6000351FE /* Main.storyboard */,
 				D4C57C3726C146D7000351FE /* Assets.xcassets */,
 				D4C57C3926C146D7000351FE /* LaunchScreen.storyboard */,
 				D4C57C3C26C146D7000351FE /* Info.plist */,
-				D4A14D5126C1489C004C1564 /* WelcomeViewController.swift */,
-				D4A14D5326C148A9004C1564 /* LoginViewController.swift */,
-				D4A14D5526C148C7004C1564 /* RegisterViewController.swift */,
-				D4A14D5726C1504F004C1564 /* GroupsTableViewController.swift */,
 				D4A14D5926C15125004C1564 /* GoogleService-Info.plist */,
-				D4A14D5B26C170EE004C1564 /* SideNavViewController.swift */,
 				D4A14D5F26C17CDC004C1564 /* Group.swift */,
 				D4A14D6126C17D2C004C1564 /* User.swift */,
-				D4A14D6326C181F9004C1564 /* UserManager.swift */,
 			);
 			path = GroupChat;
 			sourceTree = "<group>";
@@ -236,15 +269,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D4C57C3326C146D6000351FE /* ViewController.swift in Sources */,
 				D4A14D5226C1489C004C1564 /* WelcomeViewController.swift in Sources */,
 				D4C57C2F26C146D6000351FE /* AppDelegate.swift in Sources */,
 				D4A14D6026C17CDC004C1564 /* Group.swift in Sources */,
 				D4A14D5626C148C7004C1564 /* RegisterViewController.swift in Sources */,
+				D4BF4D8C26C1C97F00C40EB1 /* MembersTableViewController.swift in Sources */,
+				D4BF4D8826C1C7F600C40EB1 /* MessageSideNav.swift in Sources */,
 				D4A14D5E26C1778A004C1564 /* ProfilePageViewController.swift in Sources */,
 				D4A14D6426C181F9004C1564 /* UserManager.swift in Sources */,
 				D4A14D5826C15050004C1564 /* GroupsTableViewController.swift in Sources */,
 				D4A14D5426C148A9004C1564 /* LoginViewController.swift in Sources */,
+				D4A14D6A26C1BB95004C1564 /* ViewController.swift in Sources */,
+				D4A14D6626C1B10D004C1564 /* MessagePageController.swift in Sources */,
 				D4C57C3126C146D6000351FE /* SceneDelegate.swift in Sources */,
 				D4A14D5C26C170EE004C1564 /* SideNavViewController.swift in Sources */,
 				D4A14D6226C17D2C004C1564 /* User.swift in Sources */,
