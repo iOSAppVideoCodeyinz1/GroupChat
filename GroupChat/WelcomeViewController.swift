@@ -37,7 +37,7 @@ class WelcomeViewController: ViewController {
         
         
     }
-    override func viewWillDisappear(_ animated: Bool) {
+    override func viewDidDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         Auth.auth().removeStateDidChangeListener(authListenerHandle!)
     }
