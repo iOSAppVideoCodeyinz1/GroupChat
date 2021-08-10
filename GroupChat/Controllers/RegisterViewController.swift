@@ -38,12 +38,12 @@ class RegisterViewController: ViewController {
             print("It worked, new user is created")
             print("Email is \(authResult!.user.email)")
             print("UID is \(authResult!.user.uid)")
-            
+//            UserManager.shared.addUser(uid: Auth.auth().currentUser!.uid, firstName: self.fN, lastName: self.lN)
             
         }
         DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) { // Change `2.0` to the desired number of seconds.
            // Code you want to be delayed
-            UserManager.shared.addUser(uid: Auth.auth().currentUser!.uid, firstName: self.fN, lastName: self.lN)
+            UserManager.shared.addUser(uid: Auth.auth().currentUser!.uid, firstName: self.fN, lastName: self.lN, email: (Auth.auth().currentUser?.email)!)
         }
         self.presentingViewController?.dismiss(animated: true, completion: nil)
         

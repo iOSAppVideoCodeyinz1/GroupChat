@@ -16,6 +16,9 @@ class GroupsTableViewController: UITableViewController {
     var groupsRef: CollectionReference!
     var groupListener: ListenerRegistration!
     
+    @IBAction func pressedMemberButton(_ sender: Any) {
+        performSegue(withIdentifier: "toMembersSegue", sender: self)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addGroup))
@@ -41,10 +44,15 @@ class GroupsTableViewController: UITableViewController {
             if querySnapshot != nil {
                 self.groups.removeAll()
                 querySnapshot?.documents.forEach({ documentSnapshot in
-                    print(documentSnapshot.documentID)
-                    print(documentSnapshot.data())
-                    self.groups.append(Group(documentSnapshot: documentSnapshot))
-                    self.tableView.reloadData()
+                    let data = documentSnapshot.data()
+                    print(data)
+                    let check = data["raw"] as! String
+                    let list = check.components(separatedBy: " ")
+                    if(list.contains(Auth.auth().currentUser!.email!)){
+                        self.groups.append(Group(documentSnapshot: documentSnapshot))
+                        self.tableView.reloadData()
+                    }
+                   
                 })
             } else {
                 print("Error getting movie quotes \(error!)")
@@ -74,13 +82,16 @@ class GroupsTableViewController: UITableViewController {
             //TODO: Add a quote
             let groupNameTextField = alertController.textFields![0] as UITextField
             let emailsTextField = alertController.textFields![1] as UITextField
-
-
+            var emails = emailsTextField.text!.components(separatedBy: ", ")
+            emails.append(Auth.auth().currentUser!.email!)
+            let eStr = emails.joined(separator: " ")
             self.groupsRef.addDocument(data: [
                 "name": groupNameTextField.text!,
-                "memberEmail": Auth.auth().currentUser!.email  ,
+                "memberEmail": emails,
                 "created": Timestamp.init(),
-                "author": Auth.auth().currentUser!.uid
+                "author": Auth.auth().currentUser!.uid,
+                "ownerEmail": Auth.auth().currentUser!.email,
+                "raw": eStr
             ])
 
             
@@ -102,12 +113,37 @@ class GroupsTableViewController: UITableViewController {
         return cell
     }
     
-    
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            let groupToDelete = groups[indexPath.row]
+            
+            groupsRef.document(groupToDelete.id).delete()
+        }
+    }
+    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return groups[indexPath.row].author == Auth.auth().currentUser?.uid
+    }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        var tempG: Group?
+//        if let indexPath = tableView.indexPathForSelectedRow {
+//            print("passing data ___________ \(groups[indexPath.row])")
+//            tempG = groups[indexPath.row]
+//        }
         if segue.identifier == toMessageSegueID {
+            print("passing data dadafdafdafdafd \(tableView.indexPathForSelectedRow)")
             if let indexPath = tableView.indexPathForSelectedRow {
+                print("passing data ___________ \(groups[indexPath.row])")
                 (segue.destination as! MessagePageController).group = groups[indexPath.row]
             }
         }
+        
+//        if segue.identifier == "toMembersSegue" {
+//            print("passing data dadafdafdafdafd \(tempG)")
+//            let memController = segue.destination as! MemberPageController
+//            memController.list = "worked"
+//        }
+        
     }
+    
+    
 }

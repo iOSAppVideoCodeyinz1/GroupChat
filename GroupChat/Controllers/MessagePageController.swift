@@ -24,11 +24,27 @@ class MessagePageController: UITableViewController{
     var kFromMeMessageCell = "FromMeMessageCell"
     var kNotFromMeMessageCell = "NotFromMeMessageCell"
     var messagesListener: ListenerRegistration!
+    let toMessageDetailSegueID = "ToMessageDetailSegue"
     
+
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        print("preppppppp-------------------------")
+        if segue.identifier == "toMessageDetailSegue1" {
+            if let indexPath = tableView.indexPathForSelectedRow {
+                (segue.destination as! DetailMessageViewController).message = messages[indexPath.row]
+            }
+        }
+        if segue.identifier == "toMessageDetailSegue2" {
+            if let indexPath = tableView.indexPathForSelectedRow {
+                (segue.destination as! DetailMessageViewController).message = messages[indexPath.row]
+            }
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("name is \(UserManager.shared.tname)")
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.add, target: self, action: #selector(showAddMessageDialog))
         messagesRef = Firestore.firestore().collection("Groups").document(group!.id).collection("Messages")
     }
@@ -63,6 +79,7 @@ class MessagePageController: UITableViewController{
     
     @objc func showAddMessageDialog(){
         //todo: CRUD
+        
         let alertController = UIAlertController(title: "Create a new Message", message: "", preferredStyle: UIAlertController.Style.alert)
         
         //configure
@@ -83,7 +100,8 @@ class MessagePageController: UITableViewController{
                 "body": messageTextField.text,
                 "created": Timestamp.init(),
                 "author": Auth.auth().currentUser!.uid,
-                "name": "\(UserManager.shared.fName) \(UserManager.shared.lName)"
+                "name": "\(UserManager.shared.tname)",
+                "email": Auth.auth().currentUser!.email
             ])
             
         }

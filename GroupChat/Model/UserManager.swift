@@ -13,7 +13,7 @@ let kKeyLN = "Last Name"
 
 class UserManager {
     var _collectionRef: CollectionReference
-    
+    var name: String?
     static let shared = UserManager()
     var _document: DocumentSnapshot?
     var _userListener: ListenerRegistration?
@@ -28,7 +28,7 @@ class UserManager {
     
     //CRUD
     //Creat
-    func addUser(uid: String, firstName: String?, lastName: String?){
+    func addUser(uid: String, firstName: String?, lastName: String?, email: String){
         //Get the user if exists
         //add only not exist
         let userRef = _collectionRef.document(uid)
@@ -50,6 +50,7 @@ class UserManager {
                 }
             }
         }
+        self.name = "\(firstName as! String) \(lastName as! String)"
     }
     //Read
     func beginListening(uid: String, changeListener: (() -> Void)?) {
@@ -94,6 +95,10 @@ class UserManager {
             }
             return ""
         }
+    }
+    
+    var tname: String {
+        return self.name as! String
     }
     
     

@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		66A6494DAC233D069D847669 /* Pods_GroupChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17410722C45197E22FDA1E32 /* Pods_GroupChat.framework */; };
+		D494F6BB26C1E9DE0031E3A4 /* DetailMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D494F6BA26C1E9DE0031E3A4 /* DetailMessageViewController.swift */; };
+		D494F6BD26C1F6BE0031E3A4 /* MemberPageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D494F6BC26C1F6BE0031E3A4 /* MemberPageController.swift */; };
 		D4A14D5226C1489C004C1564 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4A14D5126C1489C004C1564 /* WelcomeViewController.swift */; };
 		D4A14D5426C148A9004C1564 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4A14D5326C148A9004C1564 /* LoginViewController.swift */; };
 		D4A14D5626C148C7004C1564 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4A14D5526C148C7004C1564 /* RegisterViewController.swift */; };
@@ -33,6 +35,8 @@
 		17410722C45197E22FDA1E32 /* Pods_GroupChat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GroupChat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		59BFC1D253F5DC78E51B4660 /* Pods-GroupChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GroupChat.debug.xcconfig"; path = "Target Support Files/Pods-GroupChat/Pods-GroupChat.debug.xcconfig"; sourceTree = "<group>"; };
 		8146E42E36A6B04EA2094F6D /* Pods-GroupChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GroupChat.release.xcconfig"; path = "Target Support Files/Pods-GroupChat/Pods-GroupChat.release.xcconfig"; sourceTree = "<group>"; };
+		D494F6BA26C1E9DE0031E3A4 /* DetailMessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailMessageViewController.swift; sourceTree = "<group>"; };
+		D494F6BC26C1F6BE0031E3A4 /* MemberPageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberPageController.swift; sourceTree = "<group>"; };
 		D4A14D5126C1489C004C1564 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		D4A14D5326C148A9004C1564 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		D4A14D5526C148C7004C1564 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
@@ -105,6 +109,8 @@
 				D4A14D5126C1489C004C1564 /* WelcomeViewController.swift */,
 				D4A14D5326C148A9004C1564 /* LoginViewController.swift */,
 				D4BF4D8B26C1C97F00C40EB1 /* MembersTableViewController.swift */,
+				D494F6BA26C1E9DE0031E3A4 /* DetailMessageViewController.swift */,
+				D494F6BC26C1F6BE0031E3A4 /* MemberPageController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -278,6 +284,8 @@
 				D4A14D5E26C1778A004C1564 /* ProfilePageViewController.swift in Sources */,
 				D4A14D6426C181F9004C1564 /* UserManager.swift in Sources */,
 				D4A14D5826C15050004C1564 /* GroupsTableViewController.swift in Sources */,
+				D494F6BD26C1F6BE0031E3A4 /* MemberPageController.swift in Sources */,
+				D494F6BB26C1E9DE0031E3A4 /* DetailMessageViewController.swift in Sources */,
 				D4A14D5426C148A9004C1564 /* LoginViewController.swift in Sources */,
 				D4A14D6A26C1BB95004C1564 /* ViewController.swift in Sources */,
 				D4A14D6626C1B10D004C1564 /* MessagePageController.swift in Sources */,

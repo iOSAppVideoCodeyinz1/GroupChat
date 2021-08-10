@@ -11,6 +11,7 @@ class Group {
     var author: String
     var id: String
     var name: String
+    var raw: String
 //    var memberEmails: String
     
 
@@ -21,6 +22,7 @@ class Group {
         self.name = data["name"] as! String
 //        self.memberEmails = data["memberEmail"] as! String
         self.author = data["author"] as! String
+        self.raw = data["raw"] as! String
     }
 }
 
@@ -29,6 +31,7 @@ class Message {
     var author: String
     var name: String
     var id: String
+    var email: String
 
     
     init(documentSnapshot: DocumentSnapshot) {
@@ -37,6 +40,7 @@ class Message {
         self.name = data["name"] as! String
         self.author = data["author"] as! String
         self.body = data["body"] as! String
+        self.email = data["email"] as! String
         
     }
 }
